@@ -142,3 +142,22 @@ Learn how to combine image and container operations to create a workflow.
 
 7. Document the commands and process used.
 
+
+## Image Management
+
+Problem Statement:
+
+You are tasked with managing and working with Docker images. Perform the following:
+
+- Pull the nginx image from Docker Hub.
+
+- Tag the image with a custom name of your choice.
+
+- Save the tagged image to a tar file for offline use.
+
+- Delete the image from your local machine.
+
+- Load the image back from the tar file and verify its presence using the docker images command.
+
+- Document all commands and provide explanations for each step.
+
