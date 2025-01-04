@@ -1,6 +1,6 @@
 ### Installation
 
-Setup the Repo
+**Setup the Repo**
 ```
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -17,14 +17,19 @@ echo \
 sudo apt-get update
 ```
 
-Install Docker Community edition
+**Install Docker Community edition**
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-Run Hello world
+**Run Hello world**
 ```
 sudo docker run hello-world
+```
+**Modify the user permission so that you can run docker command without sudo**
+
+```
+sudo usermod -a -G docker azureuser
 ```
 
 ---
