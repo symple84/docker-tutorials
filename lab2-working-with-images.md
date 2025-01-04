@@ -41,6 +41,23 @@ Learn how to pull, list, and manage Docker images effectively.
      ```bash
      docker system prune
      ```
+6. **Download and Load Offline Images:**
+
+   - Save the nginx image to a tar file:
+
+      ```
+      docker save -o nginx.tar nginx
+      ```
+
+   - Transfer the tar file to another system.
+
+     Load the image on the new system:
+
+      ```
+      docker load -i nginx.tar
+      ```
+
+
 
 ---
 
