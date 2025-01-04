@@ -7,7 +7,7 @@ Learn how to pull, list, and manage Docker images effectively.
 
 #### **Tasks:**
 
-1. **Pulling Images:**
+**Pulling Images:**
 Pull the **Ubuntu** image from Docker Hub:
   ```bash
   docker pull ubuntu
@@ -17,26 +17,26 @@ Pull the **Alpine** image:
   docker pull alpine
   ```
 
-2. **Listing Images:**
+**Listing Images:**
 View all the downloaded images using:
   ```bash
   docker images
   ```
 
-3. **Inspecting Layers:**
+**Inspecting Layers:**
 Use the `docker history` command to inspect the layers of the **Ubuntu** image:
   ```bash
   docker history ubuntu
   ```
 
-4. **Removing Images:**
+**Removing Images:**
 Remove the **Alpine** image using:
   ```bash
   docker rmi alpine
   ```
 Verify that it has been deleted by listing all images again.
 
-5. **Best Practices:**
+**Best Practices:**
 Identify unused images and clean up the system using:
   ```bash
   docker system prune
@@ -51,7 +51,7 @@ Understand how to start, list, interact with, and manage Docker containers.
 
 #### **Tasks:**
 
-1. **Starting a Container:**
+**Starting a Container:**
 Run a container using the **Ubuntu** image in interactive mode:
   ```bash
   docker run -it ubuntu
@@ -62,7 +62,7 @@ Inside the container, run the command:
   ```
 Exit the container by typing `exit`.
 
-2. **Listing Containers:**
+**Listing Containers:**
 View running containers:
   ```bash
   docker ps
@@ -72,7 +72,7 @@ View all containers (including stopped ones):
   docker ps -a
   ```
 
-3. **Stopping and Removing Containers:**
+**Stopping and Removing Containers:**
 Start a new **Alpine** container:
   ```bash
   docker run -d --name my-alpine alpine sleep 300
@@ -86,7 +86,7 @@ Remove the container:
   docker rm my-alpine
   ```
 
-4. **Interactive Mode:**
+**Interactive Mode:**
 Run a new **nginx** container in detached mode:
   ```bash
   docker run -d --name my-nginx nginx
@@ -110,40 +110,40 @@ Learn how to combine image and container operations to create a workflow.
 
 #### **Tasks:**
 
-1. Pull the **Python** image:
+Pull the **Python** image:
   ```bash
   docker pull python
   ```
 
-2. Run a container from the **Python** image and start a Python REPL:
+Run a container from the **Python** image and start a Python REPL:
   ```bash
   docker run -it python
   ```
 
-3. Inside the container, write and execute a simple Python script:
+Inside the container, write and execute a simple Python script:
   ```python
   print("Hello, Docker!")
   ```
 
-4. Exit the container and save its ID using:
+Exit the container and save its ID using:
   ```bash
   docker ps -a
   ```
 
-5. Commit the container changes to a new image:
+Commit the container changes to a new image:
   ```bash
   docker commit <container_id> python-custom
   ```
 
-6. Run a new container from the **python-custom** image:
+Run a new container from the **python-custom** image:
   ```bash
   docker run -it python-custom
   ```
 
-7. Document the commands and process used.
 
 
-## Image Management
+
+## Assignment - Image Management
 
 Problem Statement:
 
@@ -159,5 +159,4 @@ You are tasked with managing and working with Docker images. Perform the followi
 
 - Load the image back from the tar file and verify its presence using the docker images command.
 
-- Document all commands and provide explanations for each step.
 
