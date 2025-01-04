@@ -1,11 +1,31 @@
-Here's the updated **Docker Assignment** with clear instructions for running Docker containers in each task:
+### Installation
 
----
+Setup the Repo
+```
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-### **Docker Assignment: Getting Started with Images and Containers**
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
 
-#### **Objective:**
-Gain hands-on experience with Docker by pulling an image from Docker Hub, building a custom Docker image, running a container, and pushing the image back to Docker Hub.
+Install Docker Community edition
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+Run Hello world
+```
+sudo docker run hello-world
+```
 
 ---
 
