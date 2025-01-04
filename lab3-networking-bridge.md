@@ -138,4 +138,12 @@ docker stop container1 container2 app1 app2 db webserver
 docker rm container1 container2 app1 app2 db webserver
 docker network rm my_bridge_network webapp_network
 ```
+---
+Assignment
+
+You are  tasked with setting up a proof-of-concept (PoC) for a basic web application. The application consists of the following components:
+
+Frontend (Web Server): A container running Nginx that serves a static webpage.
+Backend (Database): A PostgreSQL database container storing application data.
+Ensure frontend and backend are seggregated with different bridge networks
 
