@@ -1,0 +1,35 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      docker_username:
+        description: "Docker Hub Username"
+        required: true
+        default: ""
+      docker_password:
+        description: "Docker Hub Password"
+        required: true
+        default: ""
+        type: password
+
+jobs:
+
+  build-and-push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Log in to Docker Hub
+      run: echo "${{ github.event.inputs.docker_password }}" | docker login -u "${{ github.event.inputs.docker_username }}" --password-stdin
+
+    - name: Build the Docker image
+      run: |
+        cd nginx-image/
+        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        docker tag my-image-name:$(date +%s) ${{ github.event.inputs.docker_username }}/my-image-name:latest
+
+    - name: Push the Docker image
+      run: docker push ${{ github.event.inputs.docker_username }}/my-image-name:latest
