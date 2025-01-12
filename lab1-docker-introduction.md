@@ -32,6 +32,11 @@ sudo docker run hello-world
 sudo usermod -a -G docker azureuser
 ```
 
+For AWS Ubuntu instance
+```
+sudo usermod -a -G docker ubuntu
+```
+
 ---
 
 ### **Assignment Tasks**
