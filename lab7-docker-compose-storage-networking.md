@@ -30,8 +30,6 @@ touch docker-compose.yml app/app.py db/init.sql
 
 **`docker-compose.yml`**
 ```yaml
-version: "3.9"
-
 services:
   db:
     image: postgres:latest
